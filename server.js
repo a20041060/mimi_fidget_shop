@@ -34,7 +34,7 @@ mongoose.connect(URI,{
 if(process.env.NODE_ENV==="production"){
     app.use(express.static('mimishop_client/build'))
     app.get('*',(req,res)=>{
-        res.sendFile(path.join(__dirname,'client','build','index.html'))
+        res.sendFile(path.join(__dirname,'mimishop_client','build','index.html'))
     })
 }
 
